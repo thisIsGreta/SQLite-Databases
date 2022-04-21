@@ -24,7 +24,7 @@
 
         def __repr__(self):
             return '<User %r>' % self.title
-        db.create_all()
+    db.create_all()
     ```
 # 5. Create a new entry in the books table that consists of the following data.
     ```
