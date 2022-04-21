@@ -1,8 +1,14 @@
 ###SQLite Databases### By Dr.Angela Yu, from Lecture 531-533 of 100 Days of Code
 
 ###SQLAlchemy###
+#Definition: SQLAlchemy is defined as an ORM Object Relational Mapping library. 
+#            This means that it's able to map the relationships in the database into Objects. 
+#            Fields become Object properties. 
+#            Tables can be defined as separate Classes and each row of data is a new Object.
+
 # 1. Comment out all the existing code where we create an SQLite database directly using the sqlite3 module.
 # 2. Install the required packages flask and flask_sqlalchemy and import the Flask and SQLAlchemy classes from each.
+    pip install -U Flask-SQLAlchemy
     ```
     from flask import Flask
     from flask_sqlalchemy import SQLAlchemy
@@ -15,7 +21,8 @@
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db = SQLAlchemy(app)
     ```
-# 4. Create a table in this database called books. The books table should contain 4 fields: id, title, author and rating. The fields should have the same limitations as before e.g. INTEGER/FLOAT/VARCHAR/UNIQUE/NOT NULL etc.
+# 4. Create a table in this database called books. The books table should contain 4 fields: id, title, author and rating. 
+#    The fields should have the same limitations as before e.g. INTEGER/FLOAT/VARCHAR/UNIQUE/NOT NULL etc.
     ```
     class Books(db.Model):
         id = db.Column(db.Integer, primary_key=True)
