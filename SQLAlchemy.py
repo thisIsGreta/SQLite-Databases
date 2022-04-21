@@ -71,3 +71,10 @@
     db.session.delete(book_to_delete)
     db.session.commit()
 #Note: You can also delete by querying for a particular value e.g. by title or one of the other properties.
+
+#Accessing the data in database:
+Model.query.all()
+# [<User u'admin'>, <User u'guest'>]
+
+Model.query.filter_by(username='admin').first()
+# <User u'admin'>
